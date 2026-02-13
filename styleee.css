@@ -143,10 +143,12 @@ nav a{
     background-color: #FFBF00;
     margin-bottom: 15px;
 }
-.content{
-    text-align: justify;
-    color: #a0a0a0;
+#about .content {
+  text-align: left;
+  line-height: 1.7;
+  font-size: 16px;
 }
+
 #about{
     margin-bottom: 40px;
 }
@@ -322,3 +324,4 @@ nav a{
     text-align: center;
   }
 }
+
