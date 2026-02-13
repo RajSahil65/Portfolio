@@ -282,31 +282,43 @@ nav a{
     font-size: 0.75rem;
     margin-right:5px;
 }
-@media screen and (max-width:1200px) {
-    .main-content{
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
+/* ===============================
+   RESPONSIVE FIX FOR SIDEBAR
+   =============================== */
 
-    .sidebaar{
-        position: static;
-        height: auto;
-    }
+/* Tablet + Mobile */
+@media screen and (max-width: 1200px) {
+
+  .sidebaar {
+    position: static;        /* remove fixed */
+    width: 100%;             /* take full width */
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;          /* remove sidebar space */
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
-@media screen and (max-width:750px) {
-    .projectcontainer{
-        grid-template-columns: 1fr;
-    }
 
-    #navigation nav {
-        /* Adjust nav for smaller screens */
-        justify-content: center;
-        flex-wrap: wrap;
-    }
 
-    .sidebaar{
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-    }
+/* Small Mobile */
+@media screen and (max-width: 750px) {
+
+  .projectcontainer {
+    grid-template-columns: 1fr;
+  }
+
+  #navigation nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sidebaar {
+    display: block;          /* stack items */
+    text-align: center;
+  }
 }
